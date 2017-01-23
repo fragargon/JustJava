@@ -1,7 +1,7 @@
 /**
  * Add your package below. Package name can be found in the project's AndroidManifest.xml file.
  * This is the package name our example uses:
- *
+ * <p>
  * package com.example.android.justjava;
  */
 package com.example.kiko.justjava;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the plus button is clicked.
      */
     public void increment(View view) {
-        quantity = quantity +1 ;
+        quantity = quantity + 1;
         display(quantity);
     }
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the minus button is clicked.
      */
     public void decrement(View view) {
-        quantity = quantity -1 ;
+        quantity = quantity - 1;
         display(quantity);
     }
 
@@ -48,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String priceMessage = "free";
-               displayMessage (priceMessage);
+        int price = quantity * 5;
+        String priceMessage = "Total €" + price;
+        priceMessage = priceMessage + "\nThank you!";
+        displayMessage(priceMessage);
     }
 
 
